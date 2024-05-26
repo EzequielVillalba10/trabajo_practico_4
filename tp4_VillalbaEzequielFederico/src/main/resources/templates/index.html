@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html xmlns:th="http:www.thymeLeaf.org">
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
+	<head>
+	<!-- Metadatos -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap -->
+		<link data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"> 
+		<!-- Titulo -->
+			<title>Inicio</title>
+		</head>
+		
+		<!-- Style -->
+		<style>
+			.Encabezado{
+			text-align: center;}
+		</style>
+	<body>
+			<!-- Encabezado -->
+			<header class="Encabezado" style="max-width: 1240px; left: auto;">
+				<img alt="Logo de la Facultad" src="images/fi-logo.png" class="logo">
+				<h1 >Facultad de Ingieneria</h1>
+				<p > “Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo”</p>
+			
+			</header>
+			
+			
+			<!-- Barra de navegacion -->
+			<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">UNJU</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Acerca de</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="#">Carreras</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="#">Noticias</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="#">Contacto</a>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+			
+	 <script data-th-src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}" type="text=text/javascript"></script>
+	</body>
 </html>
