@@ -1,10 +1,177 @@
 <!DOCTYPE html>
 <html xmlns:th="http:www.thymeLeaf.org">
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+	<head>
+	<!-- Metadatos -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap -->
+		<link data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"> 
+		<!-- Titulo -->
+			<title>Inicio</title>
+			
+			<!-- Style -->
+		<style>
+			.Encabezado{
+			text-align: center;}
+			
+			
+			.seccion-oscura {
+			background-color: #1b1b32;
+			color: white;
+}
 
-</body>
+			.seccion-titulo {
+				text-align: center;
+				font-size: 2rem;
+				padding: 15px 0;
+				font-family: "Rubik Dirt", system-ui;
+				
+			
+}
+			.final {
+			text-align: center;
+			background-color: #1b1b32;
+			color: white;
+			}
+		</style>
+		
+			
+			
+			<!-- Fuente de letra nueva de Google -->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+		
+		</head>
+		
+		
+	<body>
+			<!-- Encabezado -->
+			<header class="Encabezado" style="max-width: 1240px; left: auto;">
+				<img alt="Logo de la Facultad" src="images/fi-logo.png" class="logo">
+				<h1 >Facultad de Ingieneria</h1>
+				<p > “Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo”</p>
+			
+			</header>
+			
+			
+			<!-- Barra de navegacion -->
+			<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">UNJU</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Acerca de</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="#">Carreras</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="#">Noticias</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="#">Contacto</a>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+	
+	<div class="d-flex">
+		<!-- Barra lateral -->
+		<aside style="float: left; width: 200px;">
+    		<div class="menu">
+        		<h3>Menú</h3>
+        		<ul>
+            		<li><a href="biblioteca.html">Biblioteca</a></li>
+            		<li><a href="calendario_academico.html">Calendario Académico</a></li>
+            		<!-- Agrega más elementos de menú según sea necesario -->
+        		</ul>
+    		</div>
+		</aside>
+</div>		
+	
+	
+	
+	
+			<!-- Acerca de la facultad -->
+		
+				<section class="sobre-facultad seccion-oscura">
+				<div class="contenedor">
+					<h2 class="seccion-titulo">Quienes somos: </h2>
+					<p class="seccion-texto"> Somos un centro educativo especializado que ofrece una amplia gama de recursos y oportunidades para formar ingenieros altamente capacitados y preparados para enfrentar los desafíos del mundo actual. </p>
+				</div>
+				</section>
+			
+			<section class="seccion-de-noticias">
+			
+				<div class="conteiner text-center">
+						<div class="row">
+			<!-- Seccion de noticias - texto -->
+					
+				<div class="columna col-12 col-md-6">
+					<div>
+					<h3>Curso de nivelacion</h3>
+						<p> Una vez finalizado el periodo de inscripción se dicta el Curso de Nivelación y su duración es de aproximadamente un mes (febrero). El mismo tiene dos instancias de evaluación (marzo), y solo los alumnos que cumplieron con el requisito de Asistencia (70% de asistencia al curso) estarán habilitados a rendir en las fechas programadas.
+
+Si el alumno aprueba en una de las dos instancias estará en condiciones de cursar materias de 1er año correspondientes a la/s carrera/s a la/s que se inscribió.</p>
+					</div>
+				
+				</div>
+				<div class="columna col-12 col-md-6">
+				<img class="imagen-noticia" alt="Foto de EV" src="images/noticia-1.jpg" width="200" height="150" >			
+		
+				</div>
+				
+				<div class="columna col-12 col-md-6">
+					<div>
+					<h3>Curso de nivelacion</h3>
+						<p>  ¡52° Aniversario de nuestra querida Facultad de Ingeniería!
+
+Y lo festeja con una riquísima chocolatada, mañana viernes 24 de mayo a las 10.00 hs en el patio de Decanato </p>
+					</div>
+				
+				</div>
+				<div class="columna col-12 col-md-6">
+				<img class="imagen-noticia" alt="Foto de EV" src="images/noticia-2.jpg" width="200" height="150" >			
+		
+				</div>
+				
+				
+				<div class="columna col-12 col-md-6">
+					<div>
+					<h3>Pasantia</h3>
+						<p>  La Facultad de Ingeniería de la Universidad Nacional de Jujuy, llama a la inscripción de interesados para cubrir 1 (una) Plaza de Pasantía para las carreras de Ingeniería Informática, Licenciatura en Sistemas y Analista Programador Universitario, solicitadas por la empresa BALUT Hnos.
+
+						 </p>
+					</div>
+				
+				</div>
+				<div class="columna col-12 col-md-6">
+				<img class="imagen-noticia" alt="Foto de EV" src="images/noticia-3.jpg" width="200" height="150" >			
+		
+				</div>
+				
+				</div>
+				
+			</div>
+		
+		</section>
+	<footer>
+	<p class="final">Copyright © 2014-2022 - Facultad de Ingeniería - UNJu</p>
+	</footer>
+		
+	 <script data-th-src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}" type="text=text/javascript"></script>
+	</body>
 </html>
