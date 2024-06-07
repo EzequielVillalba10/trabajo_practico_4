@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+			.Encabezado{
+			text-align: center;}
+			
+
+			
+			.final {
+			text-align: center;
+			background-color: #1b1b32;
+			color: white;
+			
+			}
+			
+			
+			
+			.inicio-contenido-sobre-facultad{
+			text-align: center;
+			 padding: 20px;
+			border: 2px solid #8080804d;
+			flex-direction: column;
+			justify-content: space-evanly;
+			transition: all 0.2s ease-in;
+			}
+			/* ESTILOS PARA LAS NOTICIAS*/
+			.seccion-noticias{
+			text-align: center;
+			 padding: 20px;
+			border: 2px solid #8080804d;
+			flex-direction: column;
+			justify-content: space-evanly;
+			transition: all 0.2s ease-in;
+			
+			}
+			
+			.imagen-noticia-1 {
+			width: 200px;
+			height: 200px;
+			
+			}
+			
+			.imagen-noticia-2{
+				width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			margin: 20px;}
+			
+			.imagen-noticia-3 {
+			width: 400px;
+			height: 200px;
+			
+			}
+			
+			/*Estilos para el aside*/
+			.iconos-aside {
+			 width: 50px; 
+   			 height: 50px; 
+    		margin-right: 10px; 
+			}
+			
+			/*Estilos para redes sociales*/
+			
+			.buttons {
+ 			 min-width: 700px;
+  			display: flex;
+			  justify-content: space-around;
+			}
+			
+			
+			.buttons a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+}
+
+.buttons a:hover {
+  transform: scale(1.2);
+}
+			
+			
+			
