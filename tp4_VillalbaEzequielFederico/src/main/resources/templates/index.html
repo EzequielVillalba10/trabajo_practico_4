@@ -23,11 +23,7 @@
 				<img alt="Logo de la Facultad" src="images/fi-logo.png" class="logo">
 				<h1 >Facultad de Ingieneria</h1>
 				<p > “Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo”</p>
-			
-			</header>
-			
-			
-			<!-- Barra de navegacion -->
+		<!-- Barra de navegacion -->
 			<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand">UNJU</a>
@@ -37,28 +33,32 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="@{/inicio}">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Acerca de</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link " href="#">Carreras</a>
+          <a class="nav-link" href="@{/acercade)}">Acerca de</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="#">Noticias</a>
+          <a class="nav-link " href="@{/carrera/listado}">Carreras</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="#">Contacto</a>
+          <a class="nav-link " href="@{/notices}">Noticias</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="@{/contact}">Contacto</a>
         </li>
       </ul>
     
     </div>
   </div>
 </nav>
+			</header>
+			
+			
+			
 	
 	<div class="row">
 		<main class="col-9">
@@ -135,6 +135,12 @@ Recordamos que pueden postularse tesis de grado, posgrado, maestría o doctorado
 	
 	</div>
 	<p>Copyright © 2014-2024 - Facultad de Ingeniería - UNJu</p>
+	<p>Informacion de Contacto: </p>
+	<ul>
+	  <li>Italo Palanca N° 10</li>
+	  <li>San Salvador de Jujuy - Argentina</li>
+	  <li>info@fi.unju.edu.ar</li>
+	</ul>
 	</footer>
 	 <script data-th-src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}" type="text=text/javascript"></script>
 	</body>
