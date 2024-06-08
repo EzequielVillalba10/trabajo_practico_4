@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeLeaf.org" lang="es">
-	<head data-th-replace="@{/layouts/header :: head}">
+	<head data-th-replace="~{/layouts/header :: head}">
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	</head>
+		
+	
+	<body>
 		<footer th:fragment="footer">
-			<div class="buttons">
+		<div class="buttons">
 		
 	 <a href="https://www.facebook.com/fiunju/?locale=es_LA" class="fa fa-facebook"></a>
       <a href="https://www.youtube.com/c/FacultaddeIngenier%C3%ADaUNJu" class="fa fa-youtube"></a>
@@ -19,10 +22,6 @@
 	  <li>San Salvador de Jujuy - Argentina</li>
 	  <li>info@fi.unju.edu.ar</li>
 	</ul>
-		
-		</footer>
-	
-	<body>
-	
+	</footer>
 	</body>
 </html>
