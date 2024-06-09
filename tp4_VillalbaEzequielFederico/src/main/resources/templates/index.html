@@ -18,44 +18,7 @@
 		
 		
 	<body>
-			<!-- Encabezado -->
-			<header class="Encabezado" style="max-width: 1240px; left: auto;">
-				<img alt="Logo de la Facultad" src="images/fi-logo.png" class="logo">
-				<h1 >Facultad de Ingieneria</h1>
-				<p > “Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo”</p>
-		<!-- Barra de navegacion -->
-			<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand">UNJU</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="@{/inicio}">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="@{/acercade)}">Acerca de</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link " href="@{/carrera/listado}">Carreras</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link " href="@{/notices}">Noticias</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link " href="@{/contact}">Contacto</a>
-        </li>
-      </ul>
-    
-    </div>
-  </div>
-</nav>
-			</header>
+		<header data-th-replace="~{/layouts/header :: header}"></header>
 			
 			
 			
@@ -126,21 +89,8 @@ Recordamos que pueden postularse tesis de grado, posgrado, maestría o doctorado
 		
 
 	
-	<footer class="final">
-	<div class="buttons">
-		
-	 <a href="https://www.facebook.com/fiunju/?locale=es_LA" class="fa fa-facebook"></a>
-      <a href="https://www.youtube.com/c/FacultaddeIngenier%C3%ADaUNJu" class="fa fa-youtube"></a>
-      <a href="https://www.instagram.com/fiunju/?hl=es" class="fa fa-instagram"></a>
+	<footer data-th-replace="~{/layouts/footer :: footer}">
 	
-	</div>
-	<p>Copyright © 2014-2024 - Facultad de Ingeniería - UNJu</p>
-	<p>Informacion de Contacto: </p>
-	<ul>
-	  <li>Italo Palanca N° 10</li>
-	  <li>San Salvador de Jujuy - Argentina</li>
-	  <li>info@fi.unju.edu.ar</li>
-	</ul>
 	</footer>
 	 <script data-th-src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}" type="text=text/javascript"></script>
 	</body>
