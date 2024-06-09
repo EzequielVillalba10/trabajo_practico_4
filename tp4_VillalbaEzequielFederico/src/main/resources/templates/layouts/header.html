@@ -6,12 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link th:rel="styLesheet" data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}">
 	<link th:rel="styLesheet" data-th-href="@{/css/styles.css}">
+	<!-- Style -->
+			<link rel="stylesheet" href="/css/styles.css">
+			 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 	</head>
 	
 	
 	<body>
-			<header th:fragment="header">
-				<img alt="Logo de la Facultad" src="images/fi-logo.png" class="logo">
+			<header th:fragment="header" class="Encabezado" style="max-width: 1440px; left: auto;">
+				<img alt="Logo de la Facultad" src="../images/fi-logo.png" class="logo">
 				<h1 >Facultad de Ingieneria</h1>
 				<p > “Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo”</p>
 				<!-- Barra de navegacion -->
