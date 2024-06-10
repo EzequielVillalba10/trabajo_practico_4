@@ -30,10 +30,10 @@
       <td>
       	<span th:if="${carre.estado}">Activa</span>
       	<span th:if="${!carre.estado}">Inactiva</span>
- 
+ 	</td>
       <td> 
-      	<a class="btn btn-warning" data-th-href="@{/carrera/modificar}+${carre.codigo}" role="buttom">Editar</a>
-      	<a class="btn btn-danger" data-th-href="@{/carrera/eliminar}+${carre.codigo}" role="buttom">Eliminar</a>
+      	<a class="btn btn-warning" data-th-href="@{/carrera/modificar/}+${carre.codigo}" role="buttom">Editar</a>
+      	<a class="btn btn-danger" data-th-href="@{/carrera/eliminar/}+${carre.codigo}" role="buttom">Eliminar</a>
       </td>
     </tr>
   </tbody>
