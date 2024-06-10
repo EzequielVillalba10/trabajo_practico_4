@@ -37,8 +37,8 @@ public class CollectionCarrera {
 	 * @param carrera
 	 */
 	
-	public static void agregarCarrera(Carrera carrera) {
-		carreras.add(carrera);
+	public static boolean agregarCarrera(Carrera carrera) {
+		return carreras.add(carrera) ? true : false;
 		
 	}
 	
