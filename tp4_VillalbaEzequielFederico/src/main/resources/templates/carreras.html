@@ -7,6 +7,17 @@
 	<div class="row">
 		<div class="col col-sm-12 fondo-form p-5">
 			<div class="row mb-5">
+				
+				<div th:if="${exito}" class="alert alert-success alert-dismissible fade show" role="alert">
+					<strong data-th-text="${mensaje}"></strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+				
+				<div th:if="${!exito && mensaje != ''}" class="alert alert-danger alert-dismissible fade show" role="alert">
+					<strong data-th-text="${mensaje}"></strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			
 					<div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
 					<a role="button" class="btn btn-outline-primary" data-th-href="@{/carrera/nuevo}">Nueva Carrera</a>
 					</div>
@@ -30,10 +41,10 @@
       <td>
       	<span th:if="${carre.estado}">Activa</span>
       	<span th:if="${!carre.estado}">Inactiva</span>
- 
+ 	</td>
       <td> 
-      	<a class="btn btn-warning" data-th-href="@{/carrera/modificar}+${carre.codigo}" role="buttom">Editar</a>
-      	<a class="btn btn-danger" data-th-href="@{/carrera/eliminar}+${carre.codigo}" role="buttom">Eliminar</a>
+      	<a class="btn btn-warning" data-th-href="@{/carrera/modificar/}+${carre.codigo}" role="buttom">Editar</a>
+      	<a class="btn btn-danger" data-th-href="@{/carrera/eliminar/}+${carre.codigo}" role="buttom">Eliminar</a>
       </td>
     </tr>
   </tbody>
