@@ -38,7 +38,7 @@ private static List<Docente> docentes = new ArrayList<Docente>();
 	 * @param docente
 	 */
 	
-	public static boolean agregarCarrera(Docente docente) {
+	public static boolean agregarDocente(Docente docente) {
 		return docentes.add(docente) ? true : false;
 		
 	}
