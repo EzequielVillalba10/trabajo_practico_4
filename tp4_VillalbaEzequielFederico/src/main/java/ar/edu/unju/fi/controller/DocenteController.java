@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.unju.fi.collections.CollectionCarrera;
 import ar.edu.unju.fi.collections.CollectionDocente;
-import ar.edu.unju.fi.model.Carrera;
+
 import ar.edu.unju.fi.model.Docente;
 
 @Controller
@@ -53,7 +52,7 @@ public class DocenteController {
 		}
 		modelView.addObject("exito",exito);
 		modelView.addObject("mensaje",mensaje);
-		modelView.addObject("carreras", CollectionDocente.getDocentes());
+		modelView.addObject("docentes", CollectionDocente.getDocentes());
 		return modelView;
 	}
 	
