@@ -2,6 +2,8 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+@Component
 public class Alumno {
 	private int dni;
 	private String nombre;
