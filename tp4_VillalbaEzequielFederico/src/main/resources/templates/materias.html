@@ -13,10 +13,7 @@
 					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>
 				
-				<div th:if="${!exito && mensaje != ''}" class="alert alert-danger alert-dismissible fade show" role="alert">
-					<strong data-th-text="${mensaje}"></strong>
-					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>
+				
 			
 					<div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
 					<a role="button" class="btn btn-outline-primary" data-th-href="@{/materia/nuevo}">Nueva Materia</a>

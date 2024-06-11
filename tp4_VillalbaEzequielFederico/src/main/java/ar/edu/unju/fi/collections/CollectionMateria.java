@@ -23,10 +23,11 @@ public class CollectionMateria {
 		if (materias.isEmpty()) 
 			{
 				Docente docente = CollectionDocente.buscarDocente(123);
-				Carrera carrera = CollectionCarrera.buscarCarrera(124);
+				Carrera carrera = CollectionCarrera.buscarCarrera(1);
 				materias.add(new Materia(1, "Programacion Visual", "Segundo", 6, "Virtual", docente, carrera));
 				
 			}
+			System.out.println(materias);
 			return materias;
 		}
 	
