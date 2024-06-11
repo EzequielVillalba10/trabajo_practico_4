@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 import org.springframework.stereotype.Component;
 
 import ar.edu.unju.fi.model.Alumno;
-import ar.edu.unju.fi.model.Carrera;
+
 
 @Component
 public class CollectionAlumno {

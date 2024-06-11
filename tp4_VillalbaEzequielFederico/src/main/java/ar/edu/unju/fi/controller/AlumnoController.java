@@ -46,10 +46,10 @@ public class AlumnoController {
 		String mensaje;
 		boolean exito = CollectionAlumno.agregarAlumno(alumno);
 		if (exito) {
-			mensaje = "Carrera guardado con exito!";
+			mensaje = "Alumno guardado con exito!";
 		}else
 		{
-			mensaje = "Carrera no se pudo guardar";
+			mensaje = "Alumno no se pudo guardar";
 		}
 		modelView.addObject("exito",exito);
 		modelView.addObject("mensaje",mensaje);
