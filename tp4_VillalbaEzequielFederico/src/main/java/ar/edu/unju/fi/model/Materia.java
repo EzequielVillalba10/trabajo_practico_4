@@ -1,5 +1,8 @@
 package ar.edu.unju.fi.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Materia {
 	private int codigo;
 	private String nombre;
@@ -79,6 +82,12 @@ public class Materia {
 
 	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
+	}
+
+	@Override
+	public String toString() {
+		return "Materia [codigo=" + codigo + ", nombre=" + nombre + ", curso=" + curso + ", cantidadHoras="
+				+ cantidadHoras + ", modalidad=" + modalidad + ", docente=" + docente + ", carrera=" + carrera + "]";
 	}
 	
 	
