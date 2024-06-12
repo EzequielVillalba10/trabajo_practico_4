@@ -35,7 +35,6 @@ public class MateriaController {
 	private Carrera carrera;
 
     MateriaController(Docente docente) {
-        this.docente = docente;
     }
 	@GetMapping("/listado")
 	public String getMateriasPage(Model model)
@@ -61,10 +60,10 @@ public class MateriaController {
 	public ModelAndView guardarMateria(@ModelAttribute("materia") Materia materia, Model model)
 	{
 		ModelAndView modelView = new ModelAndView("materias");
+		String mensaje;
 		carrera = CollectionCarrera.buscarCarrera(materia.getCarrera().getCodigo());
 		materia.setCarrera(carrera);
 		docente = CollectionDocente.buscarDocente(materia.getDocente().getLegajo());
-		String mensaje;
 		boolean exito = CollectionMateria.agregarMateria(materia);
 		if (exito) {
 			mensaje ="Materia guardada cone exito";
@@ -90,6 +89,13 @@ public class MateriaController {
 		model.addAttribute("titulo", "Modificar Materia");
 		return "materia";
 	}
+	
+	@PostMapping("/modificar")
+	public String modificarMateria(@ModelAttribute("materia") Materia materia) {
+		CollectionMateria.modificarMateria(materia);
+		return("rederict:/materia/listado");
+	}
+	
 	
 	@GetMapping("eliminar/{codigo}")
 	public String eliminarMateria(@PathVariable(value="codigo")int codigo) {

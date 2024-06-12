@@ -63,6 +63,13 @@ public class Carrera {
 	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Carrera [codigo=" + codigo + ", nombre=" + nombre + ", cantidadAños=" + cantidadAños + ", estado="
+				+ estado + "]";
+	}
 	
 	
 	
