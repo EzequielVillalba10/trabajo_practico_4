@@ -64,6 +64,7 @@ public class MateriaController {
 		carrera = CollectionCarrera.buscarCarrera(materia.getCarrera().getCodigo());
 		materia.setCarrera(carrera);
 		docente = CollectionDocente.buscarDocente(materia.getDocente().getLegajo());
+		materia.setDocente(docente);
 		boolean exito = CollectionMateria.agregarMateria(materia);
 		if (exito) {
 			mensaje ="Materia guardada cone exito";
