@@ -38,6 +38,24 @@
 			<scope>test</scope>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
+		 <dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-jpa</artifactId>
+		  </dependency>
+		  
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			 <groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
 		<dependency>
     		<groupId>org.webjars</groupId>
@@ -52,6 +70,12 @@
     		<version>0.52</version>
 		</dependency>
 
+		  <dependency>
+	        <groupId>org.mapstruct</groupId>
+	        <artifactId>mapstruct</artifactId>
+	        <version>1.5.5.Final</version>
+    	</dependency>
+
 	</dependencies>
 
 	<build>
@@ -59,7 +83,33 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
+		
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <version>3.8.1</version>
+	            <configuration>
+	                <source>17</source> <!-- depending on your project -->
+	                <target>17</target> <!-- depending on your project -->
+	                <annotationProcessorPaths>
+	                    <path>
+	                        <groupId>org.mapstruct</groupId>
+	                        <artifactId>mapstruct-processor</artifactId>
+	                        <version>1.5.5.Final</version>
+	                    </path>
+	                    <!-- other annotation processors -->
+	                </annotationProcessorPaths>
+	            </configuration>
+	        </plugin>
 		</plugins>
 	</build>
 
