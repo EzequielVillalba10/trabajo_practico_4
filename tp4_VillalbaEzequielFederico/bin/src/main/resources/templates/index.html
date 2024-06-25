@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+	<head th:fragment="head">
+	<!-- Metadatos -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap -->
+		<link th:rel="styLesheet" data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}"> 
+		<!-- Titulo -->
+			<title>Inicio</title>
+	
+			<!-- Style -->
+			<link rel="stylesheet" href="/css/styles.css">
+			 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+			
+		</head>
+		
+		
+	<body>
+		<header data-th-replace="~{/layouts/header :: header}"></header>
+			
+			
+			
+	
+	<div class="row">
+		<main class="col-9">
+		<!-- Sobre nosotros FACULTAD -->
+		<section  class="inicio-contenido-sobre-facultad">
+			<div>
+			<h1 >Sobre la Facultad: </h1>
+			<p> La Facultad de Ingeniería inició sus actividades el 24 de mayo de 1972, en el edificio ubicado en la calle Gorriti N° 237 con las carreras de Agronomía, Ingeniería Química, Ingeniería en Minas e Ingeniería Metalúrgica, y José Antonio Casas fue su primer Decano, cuando pertenecía a la entonces Universidad Provincial de Jujuy. En la actualidad, la Facultad de Ingeniería de la UNJu, cuenta con siete carreras de grado, seis de pregrado y seis de posgrado; que, además, a través de sus Extensiones Áulicas, se encuentra dictando la carrera de Analista Programador Universitario en las localidades de San Pedro de Jujuy y La Quiaca, y el primer año de las carreras de Ingeniería Informática, Industrial, Química y de Minas en la ciudad de Libertador General San Martín. </p>
+			<img src="images/noticia-2.jpg" alt="Imagen de la facultad" class="imagen-facultad-inicio">
+			</div>
+		</section>
+		<!-- Noticias -->
+		<section class="seccion-noticias">
+			<div class="noticia-1">
+				<img alt="Noticia-1" src="images/convenio.jpg" class="imagen-noticia-1">
+				<h2>La Facultad de Ingeniería firmó convenio con la Municipalidad de San Salvador de Jujuy</h2>
+				<p>El Intendente de la Municipalidad de San Salvador de Jujuy, Arq. Raúl Eduardo Jorge, acompañado por el Secretario de Desarrollo Humano, Rodrigo Altea, la Subsecretaria de Desarrollo Humano, Daniela Amerise, y la Jefa del Departamento de Salud Mental, Lic. Adriana Bellman, del municipio capitalino, estuvo presente en la firma del acta acuerdo con esta unidad académica representada por el Decano Ing. Luis Alejandro Vargas y la participación del área de Ingeniería Saludable de la FI y estudiantes avanzados de la carrera de Ingeniería Industrial.
+
+El presente acuerdo tiene como objetivo la cooperación y colaboración institucional entre las partes involucradas, a fin de desarrollar, en forma conjunta, proyectos vinculados con las incumbencias de ambas instituciones en diferentes temáticas, que estén relacionadas con la capacitación, intercambio de experiencias, asistencia técnica y toda otra iniciativa para beneficio de los estudiantes de la Escuela Municipal N° 1 Marina Vilte del municipio y estudiantes de las distintas carreras que brinda la Facultad de Ingeniería de la UNJu.</p>
+			
+			</div>
+			<div>
+				<img alt="Noticia-2" src="images/barrientos.jpeg" class="imagen-noticia-2">
+				<h2>Charla | Computación de Alto Rendimiento y Biometría</h2>
+				<p>Charla COMPUTACIÓN DE ALTO RENDIMIENTO Y BIOMETRÍA
+
+Destinado a estudiantes avanzados, de postgrado y graduados en Ciencias de la Computación e Informática.
+
+Viernes 7 de junio/2024 - 18:30 hs - AULA 11</p>
+			
+			</div>
+			
+			<div>
+				<img alt="Noticia-3" src="images/noticia-3.jpg" class="imagen-noticia-3">
+				<h2>Charla | Computación de Alto Rendimiento y Biometría</h2>
+				<p>El Comité Organizador del "Concurso Nacional a las Mejores Tesis de Ingeniería" de INVAP invita a particpar de la 2da la edición del concurso.
+
+Esta propuesta nace con el objetivo de reconocer el talento argentino y poner en valor la investigación con aplicación en el universo de la ingeniería con pluralidad de miradas.
+
+Recordamos que pueden postularse tesis de grado, posgrado, maestría o doctorado aprobadas entre el 1 de junio de 2023 y el 31 de mayo de 2024.</p>
+				<p>Para acceder a más información sobre el concurso, pueden visitar el siguiente enlace: <a href="https://www.invap.com.ar/concursotesis" target="_blank" rel="noopener noreferrer">https://www.invap.com.ar/concursotesis</a></p>
+			</div>
+			
+
+		
+		</section>
+		</main>
+	
+	
+			<aside class="col-3 container-fluid">
+				
+				 <h3>Enlaces Útiles</h3>
+				
+      			 <ul class="list-group list-group-flush">
+      			 <li class="list-group-item"><img src="images/biblioteca.png" alt="icono biblioteca" class="iconos-aside">Biblioteca</li>
+      			 <li class="list-group-item"> <img src="images/calendario.jpg" alt="icono calendario" class="iconos-aside">Calendario Academico</li>
+      			 <li class="list-group-item"><img src="images/siuguarani.png" alt="icono siu guarani" class="iconos-aside">Siu Guarani</li>
+      			 <li class="list-group-item"><img src="images/unjuvirtual.png" alt="icono del aula virtual" class="iconos-aside">Plataforma Unju Virtual</li>
+      			 </ul>
+				
+			</aside>
+       
+      
+  </div>
+		
+
+	
+	<footer data-th-replace="~{/layouts/footer :: footer}">
+	
+	</footer>
+	 <script data-th-src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}" type="text=text/javascript"></script>
+	</body>
+</html>

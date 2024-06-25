@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org" lang="es">
+			<head data-th-replace="~{/layouts/header :: head}"></head>
+<body>
+<div id="container-fluid">
+		<header data-th-replace="~{/layouts/header :: header}"></header>
+<div class="row py-5 m">
+<div class="row mb-5">
+	<h3 data-th-text="${edicion}?'Modificar Materia':'Nueva Materia'" class="text-center"></h3>
+</div>
+
+
+			<!-- Formulario -->
+<div class="row">
+ <form data-th-action="${edicion}?@{/materia/modificar} : @{/materia/guardar}" th:object="${materia}" method="post">
+ 	<div class="row mb-3 justify-content-center">
+ 		<label for="dni" class="col-sm-12 col-lg-2 col-form-label text-Lg-end"> Codigo</label>
+ 		<div class="col-md-6">
+ 			<input type="number" class="form-control" id="codigo" th:field="*{codigo}" th:disabled="${edicion}?true:false">  
+ 			<input type="hidden" class="form-control" id="codigo" th:field="*{codigo}" th:if="${edicion}"> 
+ 		
+ 		</div>
+ 	</div> 
+   
+   <div class="row mb-3 justify-content-center">
+   	<label for="nombre" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Nombre</label>
+   <div class="col-md-6">
+   	  	<input type="text" class="form-control" id="nombre" th:field="*{nombre}">
+   </div>
+   </div>
+ 	
+ 	  <div class="row mb-3 justify-content-center">
+   	<label for="curso" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Curso</label>
+   <div class="col-md-6">
+   	  	<input type="text" class="form-control" id="curso" th:field="*{curso}">
+   </div>
+   </div>
+ 	<div class="row mb-3 justify-content-center">
+ 			<label for="cantidadHoras" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Cantidad de Horas</label>
+ 				<div class="col-md-6">
+   			<input type="number" class="form-control" id="cantidadHoras" th:field="*{cantidadHoras}"> 	
+   				</div>
+ 	</div>
+ 	
+<div class="row mb-3 justify-content-center">
+    <label class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Modalidad</label>
+    <div class="col-md-6">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" id="modalidad" th:field="*{modalidad}" th:value="Virtual" checked> Virtual
+        </label>
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" id="modalidad" th:field="*{modalidad}" th:value="Presencial"> Presencial
+        </label>
+    </div>
+</div>
+ 	
+ 	<div class="row mb-3 justify-content-center">
+ 			<label for="carrera" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Carrera</label>
+ 				<div class="col-md-6">
+   					<select th:field="*{carrera.codigo}" class="form-control" id="carrera" required>
+   						<option value=0 disabled selected>Seleccione una carrera </option>
+   						<option th:each="carrera : ${carreras}" th:value="${carrera.codigo}" th:text="${carrera.nombre}"></option>
+   					</select>	
+   				</div>
+ 	</div>
+ 
+ 	 	<div class="row mb-3 justify-content-center">
+ 			<label for="docente" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Docente</label>
+ 				<div class="col-md-6">
+   					<select th:field="*{docente.legajo}" class="form-control" id="docente" required>
+   						<option value=0 disabled selected>Seleccione un docente </option>
+   						<option th:each="docente : ${docentes}" th:value="${docente.legajo}" th:text="${docente.nombre}"></option>
+   					</select>	
+   				</div>
+ 	</div>
+ 
+ 	
+ 	
+ 	
+ 	<p class="text-center"><input type="submit" class="btn btn-primary" th:value="${edicion}?'Modificar':'Guardar'"></p> 
+ </form>
+
+</div>
+</div>
+
+</div>
+
+<!-- Fin formulario -->
+
+
+<footer data-th-replace="~{/layouts/footer :: footer}"></footer>
+	
+	 <script data-th-src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}" type="text=text/javascript"></script>
+</body>
+
+
+
+</html>
