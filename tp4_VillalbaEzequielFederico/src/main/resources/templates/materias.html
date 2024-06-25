@@ -39,8 +39,8 @@
       <td data-th-text="${mate.curso}"></td>
       <td data-th-text="${mate.cantidadHoras}"></td>
      <td data-th-text="${mate.modalidad}"></td>
-      <td data-th-text="${mate.docente}"></td>
-      <td data-th-text="${mate.carrera}"></td>
+      <td data-th-text="${mate.docente.apellido} + ${mate.docente.nombre}"></td>
+      <td data-th-text="${mate.carrera.nombre}"></td>
       <td> 
       	<a class="btn btn-warning" data-th-href="@{/materia/modificar/}+${mate.codigo}" role="buttom">Editar</a>
       	<a class="btn btn-danger" data-th-href="@{/materia/eliminar/}+${mate.codigo}" role="buttom">Eliminar</a>

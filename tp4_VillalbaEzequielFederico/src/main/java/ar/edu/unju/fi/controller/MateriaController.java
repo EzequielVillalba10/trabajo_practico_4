@@ -57,13 +57,14 @@ public class MateriaController {
 	}
 	
 	@PostMapping("/guardar")
-	public ModelAndView guardarMateria(@ModelAttribute("materia") Materia materia, Model model)
+	public ModelAndView guardarMateria(@ModelAttribute("materia") Materia materia,Model model)
 	{
 		ModelAndView modelView = new ModelAndView("materias");
 		String mensaje;
 		carrera = CollectionCarrera.buscarCarrera(materia.getCarrera().getCodigo());
 		materia.setCarrera(carrera);
 		docente = CollectionDocente.buscarDocente(materia.getDocente().getLegajo());
+		materia.setDocente(docente);
 		boolean exito = CollectionMateria.agregarMateria(materia);
 		if (exito) {
 			mensaje ="Materia guardada cone exito";
@@ -84,6 +85,8 @@ public class MateriaController {
 		Materia materiaEncontrada = new Materia();
 		boolean edicion = true;
 		materiaEncontrada = CollectionMateria.buscarMateria(codigo);
+		model.addAttribute("docentes", CollectionDocente.getDocentes());
+		model.addAttribute("carreras", CollectionCarrera.getCarreras());
 		model.addAttribute("edicion", edicion);
 		model.addAttribute("materia", materiaEncontrada);
 		model.addAttribute("titulo", "Modificar Materia");
@@ -93,7 +96,7 @@ public class MateriaController {
 	@PostMapping("/modificar")
 	public String modificarMateria(@ModelAttribute("materia") Materia materia) {
 		CollectionMateria.modificarMateria(materia);
-		return("rederict:/materia/listado");
+		return("redirect:/materia/listado");
 	}
 	
 	

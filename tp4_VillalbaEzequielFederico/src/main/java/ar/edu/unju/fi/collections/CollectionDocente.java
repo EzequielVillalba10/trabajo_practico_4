@@ -92,9 +92,13 @@ private static List<Docente> docentes = new ArrayList<Docente>();
 		Optional<Docente> docente = docentes.stream().filter(filterLegajo).findFirst();
 		if (docente.isPresent())
 		{
+			
 			return docente.get();
+			
 		} else {
+			
 			return null;
+			
 		}
 	}
 	

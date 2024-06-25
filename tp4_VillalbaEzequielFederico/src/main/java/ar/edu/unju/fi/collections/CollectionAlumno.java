@@ -69,22 +69,25 @@ private static List<Alumno> alumnos = new ArrayList<Alumno>();
 	 */
 	public static void modificarAlumno(Alumno alumno) 
 	{
+		
 		for(Alumno alum : alumnos)
 		{
 			if (alum.getDni() == alumno.getDni())
 			{
-				alum.setNombre(alum.getNombre());
-				alum.setApellido(alum.getApellido());
-				alum.setEmail(alum.getEmail());
-				alum.setTelefono(alum.getTelefono());
-				alum.setFechaDeNacimiento(alum.getFechaDeNacimiento());
-				alum.setDomicilio(alum.getDomicilio());
-				alum.setLU(alum.getLU());
+				alum.setNombre(alumno.getNombre());
+				alum.setApellido(alumno.getApellido());
+				alum.setEmail(alumno.getEmail());
+				alum.setTelefono(alumno.getTelefono());
+				alum.setFechaDeNacimiento(alumno.getFechaDeNacimiento());
+				alum.setDomicilio(alumno.getDomicilio());
+				alum.setLU(alumno.getLU());
+				
 			}
 			else {
 				System.out.println("No se encuentra el dni alumno");
 			}
 		}
+		
 	}
 	
 	

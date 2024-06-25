@@ -42,12 +42,17 @@
    				</div>
  	</div>
  	
- 	<div class="row mb-3 justify-content-center">
- 			<label for="modalidad" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Modalidad</label>
- 				<div class="col-md-6">
-   			<input type="text" class="form-control" id="modalidad" th:field="*{modalidad}"> 	
-   				</div>
- 	</div>
+<div class="row mb-3 justify-content-center">
+    <label class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Modalidad</label>
+    <div class="col-md-6">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" id="modalidad" th:field="*{modalidad}" th:value="Virtual" checked> Virtual
+        </label>
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" id="modalidad" th:field="*{modalidad}" th:value="Presencial"> Presencial
+        </label>
+    </div>
+</div>
  	
  	<div class="row mb-3 justify-content-center">
  			<label for="carrera" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Carrera</label>
