@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 public class CarreraDTO {
 	private int codigo;
 	private String nombre;
-	private int cantidadAños;
+	private int cantidadAnios;
 	private boolean estado;
 }
