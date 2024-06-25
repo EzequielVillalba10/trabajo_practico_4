@@ -69,7 +69,7 @@ public class CollectionCarrera {
 			if (carre.getCodigo() == carrera.getCodigo())
 			{
 				carre.setNombre(carrera.getNombre());
-				carre.setCantidadAños(carrera.getCantidadAños());
+				carre.setCantidadAnios(carrera.getCantidadAnios());
 				carre.setEstado(carrera.getEstado());
 			}
 			else {
