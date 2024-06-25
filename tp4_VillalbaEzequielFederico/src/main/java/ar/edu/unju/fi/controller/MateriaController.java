@@ -81,22 +81,38 @@ public class MateriaController {
 	}
 	
 	@GetMapping("/modificar/{codigo}")
-	public String getModificarMateriaPage(Model model, @PathVariable(value="codigo")int codigo) {
-		Materia materiaEncontrada = new Materia();
-		boolean edicion = true;
+	public String getModificarMateria(Model model, @PathVariable(value="codigo") int codigo) {
+		boolean edicion=true;
+		Materia materiaEncontrada= new Materia();
 		materiaEncontrada = CollectionMateria.buscarMateria(codigo);
-		model.addAttribute("docentes", CollectionDocente.getDocentes());
-		model.addAttribute("carreras", CollectionCarrera.getCarreras());
 		model.addAttribute("edicion", edicion);
 		model.addAttribute("materia", materiaEncontrada);
-		model.addAttribute("titulo", "Modificar Materia");
-		return "materia";
+		model.addAttribute("titulo", "Modificar materia");
+		model.addAttribute("carreras",CollectionCarrera.getCarreras());
+		model.addAttribute("docentes", CollectionDocente.getDocentes());
+		return("materia");
 	}
-	
 	@PostMapping("/modificar")
-	public String modificarMateria(@ModelAttribute("materia") Materia materia) {
-		CollectionMateria.modificarMateria(materia);
-		return("redirect:/materia/listado");
+	public String modificarMateria(@ModelAttribute("materia") Materia materia, Model model) {
+		boolean exito=false;
+		String mensaje="";
+		carrera = CollectionCarrera.buscarCarrera(materia.getCarrera().getCodigo());
+		docente = CollectionDocente.buscarDocente(materia.getDocente().getLegajo());
+		materia.setCarrera(carrera); 
+		materia.setDocente(docente);
+		try {
+			CollectionMateria.modificarMateria(materia);
+			mensaje="La materia con codigo "+materia.getCodigo()+" fue modificada con exito";
+			exito=true;
+		}catch(Exception e) {
+			mensaje=e.getMessage();
+			e.printStackTrace();
+		}		
+		model.addAttribute("exito", exito);
+		model.addAttribute("mensaje", mensaje);
+		model.addAttribute("materias", CollectionMateria.getMaterias());
+		model.addAttribute("titulo", "Materias");
+		return("materias");
 	}
 	
 	
