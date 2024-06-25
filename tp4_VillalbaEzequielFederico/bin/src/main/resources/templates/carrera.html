@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org" lang="es">
+			<head data-th-replace="~{/layouts/header :: head}"></head>
+<body>
+<div id="container-fluid">
+		<header data-th-replace="~{/layouts/header :: header}"></header>
+<div class="row py-5 m">
+<div class="row mb-5">
+	<h3 data-th-text="${edicion}?'Modificar Carrera':'Nueva Carrera'" class="text-center"></h3>
+</div>
+
+
+			<!-- Formulario -->
+<div class="row">
+ <form data-th-action="${edicion}?@{/carrera/modificar} : @{/carrera/guardar}" th:object="${carrera}" method="post">
+ 	<div class="row mb-3 justify-content-center">
+ 		<label for="codigo" class="col-sm-12 col-lg-2 col-form-label text-Lg-end"> Código</label>
+ 		<div class="col-sm-12 col-lg-4">
+ 			<input type="number" class="form-control" id="codigo" th:field="*{codigo}" th:disabled="${edicion}?true:false">  
+ 			<input type="hidden" class="form-control" id="codigo" th:field="*{codigo}" th:if="${edicion}"> 
+ 		
+ 		</div>
+ 	</div> 
+   
+   <div class="row mb-3 justify-content-center">
+   	<label for="codigo" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Nombre</label>
+   <div class="col-sm-12 col-lg-4">
+   	  	<input type="text" class="form-control" id="nombre" th:field="*{nombre}">
+   </div>
+   </div>
+ 
+ 	<div class="row mb-3 justify-content-center">
+ 			<label for="codigo" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Duracion</label>
+ 				<div class="col-sm-12 col-lg-4">
+   			<input type="number" class="form-control" id="duracion" th:field="*{cantidadAños}"> 	
+   				</div>
+ 	</div>
+ 	
+ 	<div class="row mb-3 justify-content-center" th:if="${edicion}">
+ 		<label for="estado" class="col-sm-12 col-lg-2 col-form-label text-Lg-end">Estado:</label>
+ 		<div class="col-md-4">
+   				<input class="form-check-input" type="radio" th:field="*{estado}" value="true" name="radioActiva" id="radioActiva">
+   				<label class="form-check-label" for="racioActiva">Activa</label>
+   				
+   					<input class="form-check-input" type="radio" th:field="*{estado}" value="false" name="radioInactiva" id="radioInactiva">
+   				<label class="form-check-label" for="radioInactiva">Inactiva</label>
+   				</div>
+ 	</div>
+ 
+ 	<p class="text-center"><input type="submit" class="btn btn-primary" th:value="${edicion}?'Modificar':'Guardar'"></p> 
+ </form>
+
+</div>
+</div>
+
+</div>
+
+<!-- Fin formulario -->
+
+
+<footer data-th-replace="~{/layouts/footer :: footer}"></footer>
+	
+	 <script data-th-src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}" type="text=text/javascript"></script>
+</body>
+
+
+
+</html>
